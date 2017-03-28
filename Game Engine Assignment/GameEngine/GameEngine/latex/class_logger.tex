@@ -1,0 +1,121 @@
+\hypertarget{class_logger}{}\section{Logger Class Reference}
+\label{class_logger}\index{Logger@{Logger}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_logger_a8b1b172d308ef64f28dea242ecbed3f0}\label{class_logger_a8b1b172d308ef64f28dea242ecbed3f0}} 
+enum \hyperlink{class_logger_a8b1b172d308ef64f28dea242ecbed3f0}{Verbosity} \{ {\bfseries Error}, 
+{\bfseries Warning}, 
+{\bfseries Info}
+ \}\begin{DoxyCompactList}\small\item\em Generates an enumerator of varied warning levels. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_logger_ab707ab9f31be1d73dda88e4f4f83bca0}{Debug\+PrintF} (const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em Create a debug string to print to console. \end{DoxyCompactList}\item 
+int \hyperlink{class_logger_ab1aa3d366ab83a45cc2948681922c402}{Verbose\+Debug\+PrintF} (int verbosity, const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em Create a debug string using the variable warning levels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_logger}{Logger} $\ast$ \hyperlink{class_logger_a9f9acae64a5f26267526d16196ea23c8}{instance} ()
+\begin{DoxyCompactList}\small\item\em Create a new instance of the logger class. \end{DoxyCompactList}\item 
+static void \hyperlink{class_logger_a60a7e18908cf2d21da346388cadba499}{log\+String} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Create a log string to file. \end{DoxyCompactList}\item 
+static void \hyperlink{class_logger_ae39ca8ff81f01cf03b1809cdaaa6bf14}{Write\+To\+File} (const std\+::string \&buffer)
+\begin{DoxyCompactList}\small\item\em Write a debug string to a text file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_logger_ab707ab9f31be1d73dda88e4f4f83bca0}\label{class_logger_ab707ab9f31be1d73dda88e4f4f83bca0}} 
+\index{Logger@{Logger}!Debug\+PrintF@{Debug\+PrintF}}
+\index{Debug\+PrintF@{Debug\+PrintF}!Logger@{Logger}}
+\subsubsection{\texorpdfstring{Debug\+Print\+F()}{DebugPrintF()}}
+{\footnotesize\ttfamily int Logger\+::\+Debug\+PrintF (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Create a debug string to print to console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & char format \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the debug string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_logger_a9f9acae64a5f26267526d16196ea23c8}\label{class_logger_a9f9acae64a5f26267526d16196ea23c8}} 
+\index{Logger@{Logger}!instance@{instance}}
+\index{instance@{instance}!Logger@{Logger}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \hyperlink{class_logger}{Logger} $\ast$ Logger\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new instance of the logger class. 
+
+\begin{DoxyReturn}{Returns}
+Returns the new instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_logger_a60a7e18908cf2d21da346388cadba499}\label{class_logger_a60a7e18908cf2d21da346388cadba499}} 
+\index{Logger@{Logger}!log\+String@{log\+String}}
+\index{log\+String@{log\+String}!Logger@{Logger}}
+\subsubsection{\texorpdfstring{log\+String()}{logString()}}
+{\footnotesize\ttfamily void Logger\+::log\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a log string to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_logger_ab1aa3d366ab83a45cc2948681922c402}\label{class_logger_ab1aa3d366ab83a45cc2948681922c402}} 
+\index{Logger@{Logger}!Verbose\+Debug\+PrintF@{Verbose\+Debug\+PrintF}}
+\index{Verbose\+Debug\+PrintF@{Verbose\+Debug\+PrintF}!Logger@{Logger}}
+\subsubsection{\texorpdfstring{Verbose\+Debug\+Print\+F()}{VerboseDebugPrintF()}}
+{\footnotesize\ttfamily int Logger\+::\+Verbose\+Debug\+PrintF (\begin{DoxyParamCaption}\item[{int}]{verbosity,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Create a debug string using the variable warning levels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & verbosity \\
+\hline
+{\em const} & char format \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the debug string with warning level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_logger_ae39ca8ff81f01cf03b1809cdaaa6bf14}\label{class_logger_ae39ca8ff81f01cf03b1809cdaaa6bf14}} 
+\index{Logger@{Logger}!Write\+To\+File@{Write\+To\+File}}
+\index{Write\+To\+File@{Write\+To\+File}!Logger@{Logger}}
+\subsubsection{\texorpdfstring{Write\+To\+File()}{WriteToFile()}}
+{\footnotesize\ttfamily void Logger\+::\+Write\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write a debug string to a text file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::string buffer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Logger.\+h\item 
+Logger.\+cpp\end{DoxyCompactItemize}

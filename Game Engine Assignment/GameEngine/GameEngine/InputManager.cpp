@@ -3,7 +3,7 @@
 
 void InputManager::setKeyState(int key, bool keyState)
 {
-	printf("Key %d is down, it's state is now: %s\n", key, keyState ? "True" : "False");
+//	printf("Key %d is down, it's state is now: %s\n", key, keyState ? "True" : "False");
 	keyStates[keyState] = keyState;
 }
 
@@ -27,7 +27,7 @@ void InputManager::swapKeyStates()
 
 void InputManager::setMouseState(int mouseButton, bool mouseState)
 {
-	printf("Button %d's state is now: %s\n", mouseButton, mouseState ? "True" : "False");
+//	printf("Button %d's state is now: %s\n", mouseButton, mouseState ? "True" : "False");
 	mouseStates[mouseButton] = mouseState;
 }
 

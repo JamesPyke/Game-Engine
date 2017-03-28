@@ -1,9 +1,10 @@
 #include "Logger.h"
 #include "windows.h"
+#include <iostream>
 
 int g_verbosity;
 
-Logger * Logger::_instance = NULL;
+Logger * Logger::_instance = nullptr;
 
 Logger * Logger::instance()
 {
@@ -14,10 +15,12 @@ Logger * Logger::instance()
 	return _instance;
 }
 
+//std::fstream operator<<(const std::fstream& lhs, const std::string& cs);
+
 void Logger::logString(std::string message)
 {
 	std::fstream file("log.txt", std::ios::out | std::ios::app);
-	file << message << "\n";
+	//file << message << "\n";
 	file.close();
 }
 
@@ -50,7 +53,7 @@ int Logger::VerboseDebugPrintF(int verbosity, const char * format, ...)
 
 void Logger::WriteToFile(const std::string & buffer)
 {
-	FILE *logFile = NULL;
+	FILE *logFile = nullptr;
 
 	fopen_s(&logFile, "error.log", "a+");
 

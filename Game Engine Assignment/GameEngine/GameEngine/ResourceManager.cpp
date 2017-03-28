@@ -16,8 +16,13 @@ ResourceManager::~ResourceManager()
 	resourceDirectories.clear();
 }
 
+ResourceManager::ResourceManager(const ResourceManager&)
+{
+}
+
 
 //Checks to see if an Texture has already been loaded or if the Texture is im the correct directory, if so will throw an error. Else will load the Texture.
+
 const sf::Texture & ResourceManager::getTexture(const std::string & filename)
 {
 	// Check whether the Texture alredy exists
@@ -26,7 +31,7 @@ const sf::Texture & ResourceManager::getTexture(const std::string & filename)
 		if (filename == it->first) 
 		{
 			//Send error if Texture exists
-			std::cout << "DEBUG_MESSAGE: using existing texture.\n";
+			//std::cout << "DEBUG_MESSAGE: using existing texture.\n";
 			return it->second;
 		}
 	}
