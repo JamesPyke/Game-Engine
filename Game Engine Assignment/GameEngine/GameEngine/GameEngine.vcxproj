@@ -158,21 +158,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CreateButton.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="GUI.cpp" />
     <ClCompile Include="Physics.cpp" />
     <ClCompile Include="PhysicsDynamic.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="InputManager.cpp" />
-    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CreateButton.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="GUI.h" />
     <ClInclude Include="Physics.h" />
     <ClInclude Include="PhysicsDynamic.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="InputManager.h" />
-    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LogManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

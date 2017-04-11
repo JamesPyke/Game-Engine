@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['physics',['Physics',['../class_physics.html',1,'']]],
-  ['physicsbodies',['physicsBodies',['../class_physics.html#a12f73191c1306ae4376d5934c83a4ae6',1,'Physics']]]
+  ['logger',['Logger',['../class_logger.html',1,'']]],
+  ['logstring',['logString',['../class_logger.html#a60a7e18908cf2d21da346388cadba499',1,'Logger']]]
 ];

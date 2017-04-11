@@ -1,6 +1,5 @@
 #include "PhysicsDynamic.h"
 
-
 PhysicsDynamic::PhysicsDynamic(b2World world, float x, float y, float width, float height)
 {
 	b2BodyDef bodyDef;

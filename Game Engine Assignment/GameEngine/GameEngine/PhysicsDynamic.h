@@ -4,6 +4,15 @@ class PhysicsDynamic :
 	public Physics
 {
 public:
+
+	/**
+	 * \brief Creates a Dynamic body using the base Physics class
+	 * \param b2World world 
+	 * \param float x 
+	 * \param float y 
+	 * \param float width 
+	 * \param float height 
+	 */
 	PhysicsDynamic(b2World world, float x, float y, float width, float height);
 	/**
 	* \brief Create a dynamic circle sprite

@@ -3,7 +3,7 @@
 
 int extern g_verbosity;
 
-class Logger
+class LogManager
 {
 public:
 	
@@ -17,7 +17,7 @@ public:
 	 * \brief Create a new instance of the logger class
 	 * \return Returns the new instance
 	 */
-	static Logger *instance();
+	static LogManager *instance();
 	/**
 	 * \brief Create a log string to file
 	 * \param std::string message 
@@ -53,7 +53,7 @@ private:
 	 */
 	static int VDebugPrintF(const char* format, va_list arglist);
 
-	static Logger *_instance;
+	static LogManager *_instance;
 
 };
 

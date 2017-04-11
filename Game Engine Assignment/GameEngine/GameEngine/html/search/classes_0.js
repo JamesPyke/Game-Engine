@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inputmanager',['InputManager',['../class_input_manager.html',1,'']]]
+  ['createbutton',['CreateButton',['../class_create_button.html',1,'']]]
 ];

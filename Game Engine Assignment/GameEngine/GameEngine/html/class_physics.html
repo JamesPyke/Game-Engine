@@ -24,6 +24,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Slap Engine
    </div>
+   <div id="projectbrief">Engine designed for developing 2D platformer games</div>
   </td>
  </tr>
  </tbody>
@@ -61,153 +62,54 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="class_physics-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Physics Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Physics:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_physics.png" usemap="#Physics_map" alt=""/>
+  <map id="Physics_map" name="Physics_map">
+<area href="class_physics_dynamic.html" alt="PhysicsDynamic" shape="rect" coords="0,56,105,80"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa96588091a5f548bcbd3e93930bec919"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#aa96588091a5f548bcbd3e93930bec919">createCircle</a> (b2World &amp;world, int mouseX, int mouseY, float radius)</td></tr>
-<tr class="memdesc:aa96588091a5f548bcbd3e93930bec919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a dynamic circle sprite.  <a href="#aa96588091a5f548bcbd3e93930bec919">More...</a><br /></td></tr>
-<tr class="separator:aa96588091a5f548bcbd3e93930bec919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0daeacfe7e8db67dde6d85c355fdbb7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a0daeacfe7e8db67dde6d85c355fdbb7a">Physics</a> (b2World world, float x, float y, float width, float height)</td></tr>
+<tr class="memdesc:a0daeacfe7e8db67dde6d85c355fdbb7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a default constructor for the <a class="el" href="class_physics.html">Physics</a> class.  <a href="#a0daeacfe7e8db67dde6d85c355fdbb7a">More...</a><br /></td></tr>
+<tr class="separator:a0daeacfe7e8db67dde6d85c355fdbb7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af59917c046b199565db48749b67e40b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#af59917c046b199565db48749b67e40b9">createGround</a> (b2World &amp;world, float x, float y)</td></tr>
-<tr class="memdesc:af59917c046b199565db48749b67e40b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a static ground sprite.  <a href="#af59917c046b199565db48749b67e40b9">More...</a><br /></td></tr>
-<tr class="separator:af59917c046b199565db48749b67e40b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada8fc01ca58dca7c2dc221a73f9816ec"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#ada8fc01ca58dca7c2dc221a73f9816ec">createBox</a> (b2World &amp;world, int mouseX, int mouseY)</td></tr>
-<tr class="memdesc:ada8fc01ca58dca7c2dc221a73f9816ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a dynamic box sprite.  <a href="#ada8fc01ca58dca7c2dc221a73f9816ec">More...</a><br /></td></tr>
-<tr class="separator:ada8fc01ca58dca7c2dc221a73f9816ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a9ba278cda18f49ef2b18b0b293c7f666"><td class="memItemLeft" align="right" valign="top"><a id="a9ba278cda18f49ef2b18b0b293c7f666"></a>
+b2Body *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a9ba278cda18f49ef2b18b0b293c7f666">body</a></td></tr>
+<tr class="memdesc:a9ba278cda18f49ef2b18b0b293c7f666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Points to a b2Body. <br /></td></tr>
+<tr class="separator:a9ba278cda18f49ef2b18b0b293c7f666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
 <tr class="memitem:a12f73191c1306ae4376d5934c83a4ae6"><td class="memItemLeft" align="right" valign="top"><a id="a12f73191c1306ae4376d5934c83a4ae6"></a>
 static std::vector&lt; b2Body * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_physics.html#a12f73191c1306ae4376d5934c83a4ae6">physicsBodies</a></td></tr>
 <tr class="memdesc:a12f73191c1306ae4376d5934c83a4ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a vector of all physics bodies created. <br /></td></tr>
 <tr class="separator:a12f73191c1306ae4376d5934c83a4ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ada8fc01ca58dca7c2dc221a73f9816ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada8fc01ca58dca7c2dc221a73f9816ec">&#9670;&nbsp;</a></span>createBox()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Physics::createBox </td>
-          <td>(</td>
-          <td class="paramtype">b2World &amp;&#160;</td>
-          <td class="paramname"><em>world</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mouseX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mouseY</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create a dynamic box sprite. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b2World</td><td>world </td></tr>
-    <tr><td class="paramname">int</td><td>mouseX </td></tr>
-    <tr><td class="paramname">int</td><td>mouseY </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa96588091a5f548bcbd3e93930bec919"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa96588091a5f548bcbd3e93930bec919">&#9670;&nbsp;</a></span>createCircle()</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0daeacfe7e8db67dde6d85c355fdbb7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0daeacfe7e8db67dde6d85c355fdbb7a">&#9670;&nbsp;</a></span>Physics()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Physics::createCircle </td>
+          <td class="memname">Physics::Physics </td>
           <td>(</td>
-          <td class="paramtype">b2World &amp;&#160;</td>
-          <td class="paramname"><em>world</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mouseX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mouseY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a dynamic circle sprite. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b2World</td><td>world </td></tr>
-    <tr><td class="paramname">int</td><td>mouseX </td></tr>
-    <tr><td class="paramname">int</td><td>mouseY </td></tr>
-    <tr><td class="paramname">float</td><td>radius </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af59917c046b199565db48749b67e40b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af59917c046b199565db48749b67e40b9">&#9670;&nbsp;</a></span>createGround()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Physics::createGround </td>
-          <td>(</td>
-          <td class="paramtype">b2World &amp;&#160;</td>
+          <td class="paramtype">b2World&#160;</td>
           <td class="paramname"><em>world</em>, </td>
         </tr>
         <tr>
@@ -220,7 +122,19 @@ static std::vector&lt; b2Body * &gt;&#160;</td><td class="memItemRight" valign="
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -228,19 +142,16 @@ static std::vector&lt; b2Body * &gt;&#160;</td><td class="memItemRight" valign="
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Create a static ground sprite. </p>
+<p>Creates a default constructor for the <a class="el" href="class_physics.html">Physics</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">b2World</td><td>world </td></tr>
     <tr><td class="paramname">float</td><td>x </td></tr>
     <tr><td class="paramname">float</td><td>y </td></tr>
+    <tr><td class="paramname">float</td><td>width </td></tr>
+    <tr><td class="paramname">float</td><td>height </td></tr>
   </table>
   </dd>
 </dl>

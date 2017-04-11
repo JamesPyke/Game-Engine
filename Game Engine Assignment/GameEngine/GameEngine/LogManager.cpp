@@ -1,30 +1,30 @@
-#include "Logger.h"
+#include "LogManager.h"
 #include "windows.h"
 #include <iostream>
 
 int g_verbosity;
 
-Logger * Logger::_instance = nullptr;
+LogManager * LogManager::_instance = nullptr;
 
-Logger * Logger::instance()
+LogManager * LogManager::instance()
 {
 	if (!_instance) 
 	{
-		_instance = new Logger();
+		_instance = new LogManager();
 	}
 	return _instance;
 }
 
 //std::fstream operator<<(const std::fstream& lhs, const std::string& cs);
 
-void Logger::logString(std::string message)
+void LogManager::logString(std::string message)
 {
 	std::fstream file("log.txt", std::ios::out | std::ios::app);
 	//file << message << "\n";
 	file.close();
 }
 
-int Logger::DebugPrintF(const char * format, ...)
+int LogManager::DebugPrintF(const char * format, ...)
 {
 	va_list argList;
 	va_start(argList, format);
@@ -36,7 +36,7 @@ int Logger::DebugPrintF(const char * format, ...)
 	return charsWritten;
 }
 
-int Logger::VerboseDebugPrintF(int verbosity, const char * format, ...)
+int LogManager::VerboseDebugPrintF(int verbosity, const char * format, ...)
 {
 	if (g_verbosity < verbosity)
 		return 0;
@@ -51,7 +51,7 @@ int Logger::VerboseDebugPrintF(int verbosity, const char * format, ...)
 	return charsWritten;
 }
 
-void Logger::WriteToFile(const std::string & buffer)
+void LogManager::WriteToFile(const std::string & buffer)
 {
 	FILE *logFile = nullptr;
 
@@ -64,7 +64,7 @@ void Logger::WriteToFile(const std::string & buffer)
 	fclose(logFile);
 }
 
-int Logger::VDebugPrintF(const char * format, va_list arglist)
+int LogManager::VDebugPrintF(const char * format, va_list arglist)
 {
 	const unsigned int MAX_CHARS = 1024;
 	static char s_buffer[MAX_CHARS];

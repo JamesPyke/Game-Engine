@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writetofile',['WriteToFile',['../class_logger.html#ae39ca8ff81f01cf03b1809cdaaa6bf14',1,'Logger']]]
+  ['update',['update',['../class_create_button.html#aae831bb222ab9c712f07d7c9d0e16f20',1,'CreateButton']]]
 ];

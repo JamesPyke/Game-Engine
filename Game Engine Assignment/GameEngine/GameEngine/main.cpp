@@ -1,9 +1,11 @@
-#include "Logger.h"
+#include "LogManager.h"
 #include "InputManager.h"
 #include "ResourceManager.h"
 #include "Box2D/Box2D.h"
 #include  "Physics.h"
 #include "PhysicsDynamic.h"
+#include "Button.h"
+
 /*! \mainpage Welcome to the Slap Engine Documentation
 *
 * \section intro_sec Introduction
@@ -18,12 +20,12 @@
 * 
 */
 
+
 int main()
 {
-	Logger logger;
+	LogManager logger;
 	InputManager input;
 	ResourceManager resourceManager;
-	
 
 	sf::RenderWindow window(sf::VideoMode(1024, 768), "SlapEngine");
 
@@ -35,15 +37,11 @@ int main()
 
 	testSprite.setTexture(resourceManager.getTexture("SlapEngineLogo.png"));
 	testSprite.setPosition(0, 0);
-	otherSprite.setTexture(resourceManager.getTexture("SlapEngineLogo.png"));
-	otherSprite.setPosition(1024, 0);
-	otherSprite.setScale(-1, 1);
-
+	
 	window.setFramerateLimit(60);
 
 	b2Vec2 gravity(0.0f, 30.f);
 	b2World world(gravity);
-
 
 	//box2D();
 	while (window.isOpen())
@@ -61,12 +59,12 @@ int main()
 					input.setKeyState(event.key.code, true);
 					if(sf::Keyboard::isKeyPressed(sf::Keyboard::Delete))
 					{
-						for (auto body : Physics::physicsBodies )
+						/*for (auto body : Physics::physicsBodies )
 						{
 							world.DestroyBody(body);
 						}
 
-						Physics::physicsBodies.clear();
+						Physics::physicsBodies.clear();*/
 					}
 					break;
 				case sf::Event::KeyReleased:
@@ -78,15 +76,12 @@ int main()
 					{
 						int mouseX = sf::Mouse::getPosition(window).x;
 						int mouseY = sf::Mouse::getPosition(window).y;
-					//	dynamic.createDynamicBox(world, mouseX, mouseY);
 					}
 					if (sf::Mouse::isButtonPressed(sf::Mouse::Right))
 					{
 						int mouseX = sf::Mouse::getPosition(window).x;
 						int mouseY = sf::Mouse::getPosition(window).y;
-					//	physics.createGround(world, mouseX, mouseY);
 					}
-					printf("Body Count: %d\n", Physics::physicsBodies.size());
 					break;
 				case sf::Event::MouseButtonReleased:
 					input.setMouseState(event.mouseButton.button, false);
@@ -124,7 +119,6 @@ int main()
 		//window.clear();
 		//Draw Sprites
 		window.draw(testSprite);
-		//window.draw(otherSprite);
 		window.display();
 	}
 
