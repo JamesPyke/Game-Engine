@@ -20,7 +20,6 @@
 * 
 */
 
-
 int main()
 {
 	LogManager logger;
@@ -43,7 +42,6 @@ int main()
 	b2Vec2 gravity(0.0f, 30.f);
 	b2World world(gravity);
 
-	//box2D();
 	while (window.isOpen())
 	{
 		// Event Loop
@@ -59,12 +57,11 @@ int main()
 					input.setKeyState(event.key.code, true);
 					if(sf::Keyboard::isKeyPressed(sf::Keyboard::Delete))
 					{
-						/*for (auto body : Physics::physicsBodies )
+						for (auto body : Physics::physicsBodies )
 						{
 							world.DestroyBody(body);
 						}
-
-						Physics::physicsBodies.clear();*/
+						Physics::physicsBodies.clear();
 					}
 					break;
 				case sf::Event::KeyReleased:
