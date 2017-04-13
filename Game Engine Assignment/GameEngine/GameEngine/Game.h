@@ -33,10 +33,17 @@ private:
 	InputManager inputManager;
 
 	sf::Texture txtrPlayer;
+	sf::Texture txtrBlockSingle;
+	sf::Texture txtrBlockDouble;
+	sf::Texture txtrBlockGround;
+	sf::Texture txtrMovable;
 
 	GameObject objPlayer;
 
 	GameObject objMoveableBox;
+	GameObject objSingle;
+	GameObject objDouble;
+	GameObject objGround;
 
 
 	std::vector<GameObject*> boxes;

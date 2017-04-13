@@ -2,8 +2,6 @@
 #include "InputManager.h"
 #include "ResourceManager.h"
 #include "Box2D/Box2D.h"
-#include  "Physics.h"
-#include "PhysicsDynamic.h"
 #include "Button.h"
 #include "Game.h"
 
@@ -27,14 +25,14 @@ int main()
 	LogManager logger;
 	InputManager input;
 
-	sf::RenderWindow window(sf::VideoMode(1024, 768), "SlapEngine");
+	sf::RenderWindow window(sf::VideoMode(1280, 720), "SlapEngine");
 
 	sf::Clock deltaClock;
 	float deltaTime = 0.0f;
 	
 	window.setFramerateLimit(60);
 
-	b2Vec2 gravity(0.0f, 30.f);
+	b2Vec2 gravity(0.0f, 9.8f);
 	b2World world(gravity);
 
 	Game game;

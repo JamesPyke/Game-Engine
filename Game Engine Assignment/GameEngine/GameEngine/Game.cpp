@@ -15,24 +15,36 @@ bool Game::initialize(sf::RenderWindow* window, b2World* world)
 	this->window = window;
 	this->world = world;
 
-	txtrPlayer = resourceManager.getTexture("Player.png");
+	txtrPlayer = resourceManager.getTexture("player.fw.png");
+	txtrBlockSingle = resourceManager.getTexture("FloorSingle.fw.png");
+	txtrBlockDouble = resourceManager.getTexture("FloorDouble.fw.png");
+	txtrBlockGround = resourceManager.getTexture("Ground.fw.png");
+	txtrMovable = resourceManager.getTexture("MovableBlock.fw.png");
 
-	objPlayer = GameObject(txtrPlayer, sf::Vector2f(0, 0));
+	objPlayer = GameObject(txtrPlayer, sf::Vector2f(0, 643));
 	objPlayer.addPhysics(b2_dynamicBody, world);
 
+	objSingle = GameObject(txtrBlockSingle, sf::Vector2f(371, 150));
+	objSingle.addPhysics(b2_staticBody, world);
+
+	objDouble = GameObject(txtrBlockDouble, sf::Vector2f(552, 311));
+	objDouble.addPhysics(b2_staticBody, world);
+
+	objGround = GameObject(txtrBlockGround, sf::Vector2f(0, 707 - txtrBlockGround.getSize().y/2));
+	objGround.addPhysics(b2_staticBody, world);
 	
-	objMoveableBox = GameObject(txtrPlayer, sf::Vector2f(128.0f, window->getSize().y - (txtrPlayer.getSize().y * 2.0f)));
+	objMoveableBox = GameObject(txtrMovable, sf::Vector2f(128.0f, window->getSize().y));
 	objMoveableBox.addPhysics(b2_dynamicBody, world);
 
 	boxes.push_back(&objMoveableBox);
 
-	for(int i = 0; i < ((window->getSize().x - 128.0f) / txtrPlayer.getSize().x); ++i)
-	{
-		GameObject* box = new GameObject(txtrPlayer, sf::Vector2f(txtrPlayer.getSize().x * i, window->getSize().y - txtrPlayer.getSize().y));
-		box->addPhysics(b2_staticBody, world);
+	//for(int i = 0; i < ((window->getSize().x - 128.0f) / txtrPlayer.getSize().x); ++i)
+	//{
+	//	GameObject* box = new GameObject(txtrPlayer, sf::Vector2f(txtrPlayer.getSize().x * i, window->getSize().y - txtrPlayer.getSize().y));
+	//	box->addPhysics(b2_staticBody, world);
 
-		boxes.push_back(box);
-	}
+	//	boxes.push_back(box);
+	//}
 
 	return true;
 }
@@ -87,6 +99,9 @@ void Game::draw()
 	for (auto& box : boxes)
 		window->draw(*box->getSprite());
 	window->draw(*objPlayer.getSprite());
+	window->draw(*objGround.getSprite());
+	window->draw(*objSingle.getSprite());
+	window->draw(*objDouble.getSprite());
 
 	window->display();
 }
