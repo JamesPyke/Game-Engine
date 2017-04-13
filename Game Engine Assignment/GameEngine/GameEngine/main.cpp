@@ -21,28 +21,6 @@
 * 
 */
 
-//world.Step(1 / 60.0f, 8, 3);
-
-//for (b2Body* bodyIterator = world.GetBodyList(); bodyIterator != nullptr; bodyIterator = bodyIterator->GetNext())
-//{
-//	if (bodyIterator->GetType() == b2_dynamicBody)
-//	{
-//		box.setTexture(resourceManager.getTexture("box.png"));
-//		box.setOrigin(16.0f, 16.0f);
-//		box.setPosition(bodyIterator->GetPosition().x *  30.0f, bodyIterator->GetPosition().y *  30.0f);
-//		box.setRotation(bodyIterator->GetAngle() * 180 / b2_pi);
-//		window.draw(box);
-//	}
-//	else
-//	{
-//		sf::Sprite ground;
-//		ground.setTexture(resourceManager.getTexture("ground.png"));
-//		ground.setOrigin(64/2, 64/2);
-//		ground.setPosition(bodyIterator->GetPosition().x * 30.0f, bodyIterator->GetPosition().y * 30.0f );
-//		ground.setRotation(bodyIterator->GetAngle() * 180 / b2_pi);
-//		window.draw(ground);
-//	}
-//}
 
 int main()
 {
@@ -91,11 +69,13 @@ int main()
 			}
 		}
 
+		input.swapKeyStates();
+		input.swapMouseStates();
+
 		game.update(deltaTime);
 		game.draw();
 
-		input.swapKeyStates();
-		input.swapMouseStates();
+
 
 		deltaTime = deltaClock.restart().asSeconds();
 

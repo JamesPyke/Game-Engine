@@ -160,6 +160,7 @@
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="Physics.cpp" />
     <ClCompile Include="PhysicsDynamic.cpp" />
@@ -171,6 +172,7 @@
   <ItemGroup>
     <ClInclude Include="Button.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="GUI.h" />
     <ClInclude Include="Physics.h" />
     <ClInclude Include="PhysicsDynamic.h" />

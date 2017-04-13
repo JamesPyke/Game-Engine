@@ -1,4 +1,8 @@
 #pragma once
+#include "ResourceManager.h"
+#include "GameObject.h"
+#include "InputManager.h"
+
 namespace sf {
 	class RenderWindow;
 }
@@ -19,8 +23,23 @@ public:
 
 private:
 
+	const float PLAYER_MOVEMENT_SPEED = 500.0f;
+	float playerJumpHeight = 40.0f;
+
 	sf::RenderWindow* window;
 	b2World* world;	
+
+	ResourceManager resourceManager;
+	InputManager inputManager;
+
+	sf::Texture txtrPlayer;
+
+	GameObject objPlayer;
+
+	GameObject objMoveableBox;
+
+
+	std::vector<GameObject*> boxes;
 
 };
 
