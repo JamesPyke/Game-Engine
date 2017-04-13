@@ -24,7 +24,11 @@ void GameObject::addPhysics(const b2BodyType& bodyType, b2World* world)
 	
 
 	b2PolygonShape Shape;
-	Shape.SetAsBox((sprite.getGlobalBounds().width / 2.0f) / 30.f, (sprite.getGlobalBounds().height / 2.0f) / 30.f); 
+
+	float spriteWidth = sprite.getGlobalBounds().width;
+	float spriteHeight = sprite.getGlobalBounds().height;
+
+	Shape.SetAsBox(spriteWidth / 2.0f / 30.0f, spriteHeight / 2.0f / 30.f); 
 
 	b2FixtureDef FixtureDef;
 	FixtureDef.density = 0.f;  

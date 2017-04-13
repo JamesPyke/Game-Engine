@@ -21,16 +21,18 @@ bool Game::initialize(sf::RenderWindow* window, b2World* world)
 	txtrBlockGround = resourceManager.getTexture("Ground.fw.png");
 	txtrMovable = resourceManager.getTexture("MovableBlock.fw.png");
 
-	objPlayer = GameObject(txtrPlayer, sf::Vector2f(0, 643));
+	objPlayer = GameObject(txtrBlockSingle, sf::Vector2f(0, 643));
 	objPlayer.addPhysics(b2_dynamicBody, world);
 
 	objSingle = GameObject(txtrBlockSingle, sf::Vector2f(371, 150));
 	objSingle.addPhysics(b2_staticBody, world);
 
 	objDouble = GameObject(txtrBlockDouble, sf::Vector2f(552, 311));
+	objDouble.getSprite()->setOrigin(sf::Vector2f((txtrBlockDouble.getSize().x / 4.0f), 0.0f));
 	objDouble.addPhysics(b2_staticBody, world);
 
-	objGround = GameObject(txtrBlockGround, sf::Vector2f(0, 707 - txtrBlockGround.getSize().y/2));
+	objGround = GameObject(txtrBlockGround, sf::Vector2f(0,  707 - txtrBlockGround.getSize().y/2));
+	objGround.getSprite()->setOrigin(sf::Vector2f((txtrBlockGround.getSize().x / 4.0f), 0.0f));
 	objGround.addPhysics(b2_staticBody, world);
 	
 	objMoveableBox = GameObject(txtrMovable, sf::Vector2f(128.0f, window->getSize().y));
