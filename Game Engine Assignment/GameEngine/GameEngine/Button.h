@@ -25,10 +25,10 @@ public:
 	~Button();
 	/**
 	 * \brief Constructor for create button
-	 * \param string 
-	 * \param font 
-	 * \param position 
-	 * \param style 
+	 * \param string name of string
+	 * \param font name of font
+	 * \param position position
+	 * \param style style
 	 */
 	Button(std::string string, sf::Font& font, sf::Vector2f position, sf::Uint32 style);
 
@@ -49,17 +49,17 @@ public:
 	void setColorTextClicked(sf::Color text);
 	/**
 	 * \brief Sets the colour for the defualt button 
-	 * \param colour 
+	 * \param colour colour 
 	 */
 	void setColourNormal(sf::Color colourNormal);
 	/**
 	 * \brief Sets the colour for the button when hovered
-	 * \param colour
+	 * \param colour colour
 	 */
 	void setColourHover(sf::Color colourHover);
 	/**
 	 * \brief Sets the colour for the button when the button is clicked
-	 * \param colour
+	 * \param colour colour
 	 */
 	void setColourClicked(sf::Color colourClicked);
 	/**
@@ -69,60 +69,60 @@ public:
 	void setBordercolour(sf::Color border);
 	/**
 	 * \brief Sets the thickness for the border of the button
-	 * \param thickness float
+	 * \param thickness thickness
 	 */
 	void setBorderThickness(float thickness);
 	/**
 	 * \brief Sets the radius for the border
-	 * \param radius float
+	 * \param radius radius
 	 */
 	void setBorderRadius(float radius);
 	/**
 	 * \brief Sets the position of the Button
-	 * \param sf::Vector2f position 
+	 * \param position position 
 	 */
 	void setPosition(sf::Vector2f position);
 	/**
 	 * \brief Sets the size of the button
-	 * \param unsigned int size 
+	 * \param size size 
 	 */
 	void setSize(unsigned int size);
 	/**
 	 * \brief Sets the text inside the button
-	 * \param std::string text 
+	 * \param text text 
 	 */
 	void setText(std::string text);
 	/**
 	 * \brief Sets the style of the button
-	 * \param sf::Uint32 style 
+	 * \param style style 
 	 */
 	void setStyle(sf::Uint32 style);
 	/**
 	 * \brief Sets the font of the Text inside the button
-	 * \param sf::Font& font 
+	 * \param font font 
 	 */
 	void setFont(sf::Font& font);
 	
 	/**
 	 * \brief Gets the position the the button
-	 * \return sf::Vector2f
+	 * \return position
 	 */
 	sf::Vector2f getPostion();
 	/**
 	 * \brief Gets the dimensions of the button
-	 * \return sf::Vector2f
+	 * \return dimensions
 	 */
 	sf::Vector2f getDimensions();
 
 	/**
 	 * \brief Gets the current state of the button
-	 * \return sf::Uint32
+	 * \return state
 	 */
 	sf::Uint32 getState();
 	/**
 	 * \brief Update the button using the events and render window
-	 * \param sf::Event& event 
-	 * \param sf::RenderWindow& window 
+	 * \param event event 
+	 * \param window window 
 	 */
 	void update(sf::Event& event, sf::RenderWindow& window);
 
@@ -133,11 +133,11 @@ public:
 
 	/**
 	 * \brief Gets the bounds of the button to check for mouse position
-	 * \param sf::Window window 
-	 * \param int x 
-	 * \param int y 
-	 * \param int h 
-	 * \param int w 
+	 * \param window window 
+	 * \param x x position 
+	 * \param y y position 
+	 * \param h height 
+	 * \param w width 
 	 * \return returns true if mouse is within bounds
 	 */
 	bool getBounds(sf::Window window, int x, int y, int h, int w);

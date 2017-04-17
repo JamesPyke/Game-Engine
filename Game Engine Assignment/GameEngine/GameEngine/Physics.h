@@ -10,11 +10,11 @@ public:
 
 	/**
 	 * \brief Creates a default constructor for the Physics class
-	 * \param b2World world 
-	 * \param float x 
-	 * \param float y 
-	 * \param float width 
-	 * \param float height 
+	 * \param world world 
+	 * \param x x position 
+	 * \param y y position 
+	 * \param width width 
+	 * \param height height 
 	 */
 	Physics(b2World world, float x, float y, float width, float height);
 

@@ -5,19 +5,19 @@ public:
 
 	/**
 	 * \brief Get the current state of a key
-	 * \param int key 
-	 * \param bool keyState 
+	 * \param key key 
+	 * \param keyState keyState 
 	 */
 	void setKeyState(int key, bool keyState);
 	/**
 	 * \brief Check if a key if down
-	 * \param int key 
+	 * \param key key 
 	 * \return Returns a true or false value based on whether the key is down or up 
 	 */
 	bool isKeyDown(int key);
 	/**
 	 * \brief Check if a key is clicked
-	 * \param int key 
+	 * \param key key 
 	 * \return Returns a true or false value on whether the key clicked
 	 */
 	bool isKeyClicked(int key);
@@ -28,19 +28,19 @@ public:
 
 	/**
 	 * \brief Get the current state of the mouse
-	 * \param int mouseButton 
-	 * \param bool mouseState 
+	 * \param mouseButton mouseButton 
+	 * \param mouseState mouseState 
 	 */
 	void setMouseState(int mouseButton, bool mouseState);
 	/**
 	 * \brief Check if the mouse buttons are down
-	 * \param int mouseButton 
+	 * \param mouseButton mouseButton 
 	 * \return Return a true or false value based on whether the mouse button is up or down
 	 */
 	bool isMouseDown(int mouseButton);
 	/**
 	 * \brief Check if the mouse button has been clicked
-	 * \param int mouseButton 
+	 * \param mouseButton mouseButton 
 	 * \return Return a true or false value based on whether the mouse button is clicked
 	 */
 	bool isMouseClicked(int mouseButton);

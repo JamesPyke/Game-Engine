@@ -20,35 +20,35 @@ public:
 	static LogManager *instance();
 	/**
 	 * \brief Create a log string to file
-	 * \param std::string message 
+	 * \param message message 
 	 */
 	static void logString(std::string message);
 	/**
 	 * \brief Create a debug string to print to console
-	 * \param const char format 
-	 * \param ... 
+	 * \param format format 
+	 * \param additional parameters  
 	 * \return Returns the debug string
 	 */
 	int DebugPrintF(const char *format, ...);
 	/**
 	 * \brief Create a debug string using the variable warning levels
-	 * \param int verbosity 
-	 * \param const char format 
-	 * \param ... 
+	 * \param verbosity verbosity 
+	 * \param format format 
+	 * \param additional parameters 
 	 * \return Returns the debug string with warning level
 	 */
 	int VerboseDebugPrintF(int verbosity, const char* format, ...);
 	/**
 	 * \brief Write a debug string to a text file
-	 * \param const std::string buffer 
+	 * \param buffer buffer 
 	 */
 	static void WriteToFile(const std::string &buffer);
 
 private:
 	/**
 	 * \brief Create a debug string using the variable warning levels
-	 * \param const char format 
-	 * \param va_list arglist 
+	 * \param format format 
+	 * \param arglist arguement list 
 	 * \return Returns the debug string with warning level
 	 */
 	static int VDebugPrintF(const char* format, va_list arglist);
