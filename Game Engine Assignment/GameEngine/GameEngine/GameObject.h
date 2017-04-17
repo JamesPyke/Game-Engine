@@ -15,7 +15,7 @@ public:
 	GameObject();
 	GameObject(sf::Texture& texture, const sf::Vector2f& position);
 
-	void addPhysics(const b2BodyType& bodyType, b2World* world);
+	void addPhysics(const b2BodyType& bodyType, b2World* world, bool hasRotation);
 	void removePhysics() const;
 
 	b2Body* getRigidbody();

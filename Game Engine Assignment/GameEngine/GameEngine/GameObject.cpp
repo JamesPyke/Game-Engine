@@ -14,12 +14,13 @@ GameObject::GameObject(sf::Texture& texture, const sf::Vector2f& position)
 	sprite.setPosition(position);
 }
 
-void GameObject::addPhysics(const b2BodyType& bodyType, b2World* world)
+void GameObject::addPhysics(const b2BodyType& bodyType, b2World* world, bool hasRotation)
 {
 	b2BodyDef BodyDef;
 	BodyDef.position = b2Vec2(sprite.getPosition().x / 30.f, sprite.getPosition().y / 30.f);
 	BodyDef.type = bodyType;
 	BodyDef.userData = this;
+	BodyDef.fixedRotation = !hasRotation;
 	rigidbody = world->CreateBody(&BodyDef);
 	
 
@@ -31,7 +32,7 @@ void GameObject::addPhysics(const b2BodyType& bodyType, b2World* world)
 	Shape.SetAsBox(spriteWidth / 2.0f / 30.0f, spriteHeight / 2.0f / 30.f); 
 
 	b2FixtureDef FixtureDef;
-	FixtureDef.density = 0.f;  
+	FixtureDef.density = 0.0f;  
 	FixtureDef.shape = &Shape; 
 	rigidbody->CreateFixture(&FixtureDef);
 }
