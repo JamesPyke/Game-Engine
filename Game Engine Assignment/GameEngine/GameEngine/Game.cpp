@@ -103,7 +103,7 @@ bool Game::initialize(sf::RenderWindow* window, b2World* world)
 	objMoveableBox3.getSprite()->setOrigin(sf::Vector2f(txtrMovable.getSize().x / 2 - 32.0f, txtrMovable.getSize().y / 2 - 32.0f));
 	objMoveableBox3.addPhysics(b2_dynamicBody, world, true);
 
-	objMoveableBox4 = GameObject(txtrMovable, sf::Vector2f(1000, 68));
+	objMoveableBox4 = GameObject(txtrMovable, sf::Vector2f(999, 68));
 	objMoveableBox4.getSprite()->setOrigin(sf::Vector2f(txtrMovable.getSize().x / 2 - 32.0f, txtrMovable.getSize().y / 2 - 32.0f));
 	objMoveableBox4.addPhysics(b2_dynamicBody, world, true);
 
